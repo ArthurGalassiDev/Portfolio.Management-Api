@@ -1,3 +1,4 @@
+using Portfolio.Management.Infra.IoC;
 
 namespace Portfolio.Management.Api
 {
@@ -7,10 +8,8 @@ namespace Portfolio.Management.Api
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.ConfigureContainer(builder.Configuration);
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
@@ -23,10 +22,11 @@ namespace Portfolio.Management.Api
                 app.UseSwaggerUI();
             }
 
+            builder.Services.SetupDatabases(app.Services, builder.Configuration);
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
