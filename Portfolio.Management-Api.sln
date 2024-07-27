@@ -1,16 +1,17 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.Management.Api", "Portfolio.Management.Api\Portfolio.Management.Api.csproj", "{CAF0AAB7-3B85-46ED-8A98-3E7756760BCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.Management.Api", "Portfolio.Management.Api\Portfolio.Management.Api.csproj", "{CAF0AAB7-3B85-46ED-8A98-3E7756760BCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.Management.Domain", "Portfolio.Management.Domain\Portfolio.Management.Domain.csproj", "{0D7047DF-E606-4B66-8A52-A35A2E941F4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.Management.Domain", "Portfolio.Management.Domain\Portfolio.Management.Domain.csproj", "{0D7047DF-E606-4B66-8A52-A35A2E941F4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.Management.Infra.IoC", "Portfolio.Management.Infra.IoC\Portfolio.Management.Infra.IoC.csproj", "{E08521D5-4C07-4A87-B00F-EB54CDB43B7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.Management.Infra.IoC", "Portfolio.Management.Infra.IoC\Portfolio.Management.Infra.IoC.csproj", "{E08521D5-4C07-4A87-B00F-EB54CDB43B7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.Management.Infra.Data", "Portfolio.Management.Infra.Data\Portfolio.Management.Infra.Data.csproj", "{F57BBC53-9F81-4477-96A6-F654053FE97B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.Management.Infra.Data", "Portfolio.Management.Infra.Data\Portfolio.Management.Infra.Data.csproj", "{F57BBC53-9F81-4477-96A6-F654053FE97B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.Management.Tests", "Portfolio.Management.Tests\Portfolio.Management.Tests.csproj", "{7C5B7115-97FD-4F5E-B041-AD2D8DC2D99D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.Management.Tests", "Portfolio.Management.Tests\Portfolio.Management.Tests.csproj", "{7C5B7115-97FD-4F5E-B041-AD2D8DC2D99D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Api", "1 - Api", "{49F43A3F-9B8E-4B05-BC02-CBED7BE56B6D}"
 EndProject
@@ -19,6 +20,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{513E4AC3-48C1-4333-B7CE-8027D3D57D8A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Tests", "4 - Tests", "{920AD33C-EEB6-4B86-AEC4-DB9DEBBF5C8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.Management.Infra.Setup", "Portfolio.Management.Infra.Setup\Portfolio.Management.Infra.Setup.csproj", "{34E015AE-5881-4490-942A-251C3166DDB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +49,10 @@ Global
 		{7C5B7115-97FD-4F5E-B041-AD2D8DC2D99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C5B7115-97FD-4F5E-B041-AD2D8DC2D99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C5B7115-97FD-4F5E-B041-AD2D8DC2D99D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34E015AE-5881-4490-942A-251C3166DDB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34E015AE-5881-4490-942A-251C3166DDB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34E015AE-5881-4490-942A-251C3166DDB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34E015AE-5881-4490-942A-251C3166DDB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +63,7 @@ Global
 		{E08521D5-4C07-4A87-B00F-EB54CDB43B7E} = {513E4AC3-48C1-4333-B7CE-8027D3D57D8A}
 		{F57BBC53-9F81-4477-96A6-F654053FE97B} = {513E4AC3-48C1-4333-B7CE-8027D3D57D8A}
 		{7C5B7115-97FD-4F5E-B041-AD2D8DC2D99D} = {920AD33C-EEB6-4B86-AEC4-DB9DEBBF5C8D}
+		{34E015AE-5881-4490-942A-251C3166DDB0} = {513E4AC3-48C1-4333-B7CE-8027D3D57D8A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3FB537B9-004D-4ECA-A9E8-011E3A0E1001}

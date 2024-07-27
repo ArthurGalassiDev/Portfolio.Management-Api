@@ -1,4 +1,4 @@
-﻿namespace Portfolio.Management.Domain
+﻿namespace Temp
 {
     public class Class1
     {
