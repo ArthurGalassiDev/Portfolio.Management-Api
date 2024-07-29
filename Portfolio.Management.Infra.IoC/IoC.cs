@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Portfolio.Management.Domain.Entities;
 using Portfolio.Management.Domain.Services;
 using Portfolio.Management.Infra.Data.Context;
 using Microsoft.Extensions.DependencyInjection;
 using Portfolio.Management.Domain.Services.Abstractions;
+using Portfolio.Management.Domain.Services.EntityServices;
 
 namespace Portfolio.Management.Infra.IoC
 {
@@ -12,9 +14,10 @@ namespace Portfolio.Management.Infra.IoC
         public static IServiceCollection ConfigureContainer(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<TransacaoService>();
-            services.AddScoped<IProdutoFinanceiroService, ProdutoFinanceiroService>();
-            services.AddScoped<EmailNotificationService>();
 
+
+            services.AddScoped<IEntityService<ProdutoFinanceiro>, ProdutoFinanceiroService>();
+            services.AddScoped<EmailNotificationService>();
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
            
             return services;
@@ -25,7 +28,7 @@ namespace Portfolio.Management.Infra.IoC
             using (var serviceScope = provider.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
                 var context = serviceScope.ServiceProvider.GetService<ApplicationDbContext>();
-                context.Database.EnsureCreated();
+                context!.Database.EnsureCreated();
             }
 
             return services;

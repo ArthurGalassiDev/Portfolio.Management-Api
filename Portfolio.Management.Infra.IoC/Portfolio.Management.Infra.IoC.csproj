@@ -15,7 +15,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Portfolio.Management.Domain\Portfolio.Management.Domain.csproj" />
     <ProjectReference Include="..\Portfolio.Management.Infra.Data\Portfolio.Management.Infra.Data.csproj" />
-    <ProjectReference Include="..\Portfolio.Management.Infra.Setup\Portfolio.Management.Infra.Setup.csproj" />
   </ItemGroup>
 
 </Project>
